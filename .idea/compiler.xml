@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="common-service" />
+        <module name="swagger-mall-demo" />
+        <module name="param-validator" />
+        <module name="method-logger" />
+        <module name="excep-enums-constants" />
+        <module name="numerical-val-not-equal-empty-char" />
+        <module name="tx-not-rollback" />
+        <module name="by-page" />
+        <module name="chn-region" />
+        <module name="common-dto" />
+        <module name="swagger-ecmiddle-demo" />
+        <module name="common-vo" />
+        <module name="null-field-mapped-null-object" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="aop-param-validate" target="1.8" />
+      <module name="common-api" target="1.8" />
+      <module name="test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="test" options="-parameters" />
+    </option>
+  </component>
+</project>

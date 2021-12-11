@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="io.hel.mapper.OrderInfoMapper">
+
+    <sql id="orderInfoColumns">
+        id,order_id orderId,order_name orderName,create_time createTime,order_status orderStatus
+    </sql>
+
+    <select id="selectByNameOrStatus" resultType="io.hel.entity.OrderInfo">
+        SELECT <include refid="orderInfoColumns"/> FROM order_info
+        <where>
+            <if test="orderName != null and orderName != ''">
+                AND order_name LIKE CONCAT('%', #{orderName}, '%')
+            </if>
+            <if test="orderStatus != null and orderStatus != ''">
+                AND order_status=#{orderStatus}
+            </if>
+        </where>
+    </select>
+
+</mapper>

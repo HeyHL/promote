@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="io.hel.mapper.CHNRegionMapper">
+    <select id="selectRegion" resultType="io.hel.entity.Region">
+        SELECT region_id regionId,region_name regionName,region_short_name regionShortName,region_code regionCode,parent_region_id parentRegionId,region_level regionLevel FROM sys_region
+    </select>
+</mapper>

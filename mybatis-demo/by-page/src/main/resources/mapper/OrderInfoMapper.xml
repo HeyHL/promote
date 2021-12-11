@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="io.hel.mapper.OrderInfoMapper">
+
+    <select id="selectByLimit" resultType="io.hel.entity.OrderInfo">
+        SELECT id,order_id orderId,order_name orderName,create_time createTime,order_status orderStatus FROM order_info LIMIT #{offset}, #{size}
+    </select>
+
+    <select id="selectByPage" resultType="io.hel.entity.OrderInfo">
+        SELECT id,order_id orderId,order_name orderName,create_time createTime,order_status orderStatus FROM order_info
+    </select>
+
+    <select id="selectByPageHelper" resultType="io.hel.entity.OrderInfo">
+        SELECT id,order_id orderId,order_name orderName,create_time createTime,order_status orderStatus FROM order_info
+    </select>
+
+    <select id="selectByRowBounds" resultType="io.hel.entity.OrderInfo">
+        SELECT id,order_id orderId,order_name orderName,create_time createTime,order_status orderStatus FROM order_info
+    </select>
+
+    <select id="selectByRowBoundsForNil" resultType="io.hel.entity.OrderInfo">
+        SELECT id,order_id orderId,order_name orderName,create_time createTime,order_status orderStatus FROM order_info
+    </select>
+
+</mapper>

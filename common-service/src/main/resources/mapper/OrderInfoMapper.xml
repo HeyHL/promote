@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="io.hel.mapper.OrderInfoMapper">
+
+    <insert id="insertOrderInfo" parameterType="io.hel.entity.OrderInfo">
+        INSERT INTO order_info (order_id, order_name, create_time) VALUES (#{orderId}, #{orderName}, #{createTime})
+    </insert>
+
+    <select id="selectById" resultMap="orderInfoResultMap">
+        SELECT id,order_id,order_name,create_time FROM order_info WHERE id=#{id}
+    </select>
+
+    <resultMap id="orderInfoResultMap" type="io.hel.entity.OrderInfo">
+        <id column="id" property="id"/>
+        <result column="order_id" property="orderId"/>
+        <result column="order_name" property="orderName"/>
+        <result column="create_time" property="createTime"/>
+    </resultMap>
+
+    <select id="selectDetailById" resultType="io.hel.entity.OrderInfo">
+        SELECT order_detail FROM order_info WHERE id=1;
+    </select>
+
+</mapper>
