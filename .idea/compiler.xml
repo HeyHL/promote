@@ -7,19 +7,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="common-service" />
-        <module name="swagger-mall-demo" />
         <module name="param-validator" />
-        <module name="method-logger" />
-        <module name="excep-enums-constants" />
-        <module name="numerical-val-not-equal-empty-char" />
-        <module name="tx-not-rollback" />
-        <module name="by-page" />
-        <module name="chn-region" />
-        <module name="common-dto" />
-        <module name="swagger-ecmiddle-demo" />
-        <module name="common-vo" />
+        <module name="common-service" />
         <module name="null-field-mapped-null-object" />
+        <module name="swagger-mall-demo" />
+        <module name="chn-region" />
+        <module name="by-page" />
+        <module name="swagger-middle-demo" />
+        <module name="numerical-val-not-equal-empty-char" />
+        <module name="method-logger" />
+        <module name="common-vo" />
+        <module name="common-dto" />
+        <module name="tx-not-rollback" />
+        <module name="excep-enums-constants" />
+        <module name="swagger-ecmiddle-demo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
